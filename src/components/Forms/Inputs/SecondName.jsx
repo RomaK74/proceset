@@ -9,5 +9,5 @@ export const SecondName = ({label, initialValue, setError}) =>
            type="text"
            initialValue={initialValue || ""}
            validate={required}
-           onFocus={() => setError('')}
+           onFocus={() => setError(null) || null}
     />

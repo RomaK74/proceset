@@ -25,7 +25,7 @@ export const User = () => {
     return (
         <div className="content">
             {user && <UserForm editDataUser={editDataUser} user={user}/>}
-            {error && "Ошибка получения данных"}
+            {error ? "Ошибка получения данных" : undefined}
         </div>
     );
 }

@@ -13,7 +13,6 @@ export const LoginForm = () => {
     const [error, setError] = useOutletContext();
     const navigate = useNavigate();
     const [login] = useMutation(LOGIN);
-
     useEffect(() => {
         setError('');
     }, []);
@@ -41,7 +40,7 @@ export const LoginForm = () => {
                     <div>
                         <Email setError={setError}/>
                         <Password setError={setError} validate={required}/>
-                        <Button submitting={props.submitting} error={error} text="Войти в систему"/>
+                        <Button submitting={props.submitting} error={error ? error : undefined} text="Войти в систему"/>
                     </div>
                 )}
             </Form>

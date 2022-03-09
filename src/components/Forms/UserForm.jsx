@@ -16,7 +16,7 @@ export const UserForm = ({user, editDataUser}) => {
 
     }, []);
     const [buttonText, setButtonText] = useState("Сохранить");
-    const [errorsForm, setErrorsForm] = useState(false);
+    const [errorsForm, setErrorsForm] = useState('');
     const [errorsServer, setErrorsServer] = useState('');
 
     const validate = values => {
@@ -27,9 +27,12 @@ export const UserForm = ({user, editDataUser}) => {
                 errors.confirm = confirm(values.password, values.confirm);
         }
         if (errors.firstName || errors.secondName || errors.email || errors.password || errors.confirm) {
-            setErrorsForm(true);
+            setErrorsForm('Ошибка');
         } else
-            setErrorsForm(false);
+            setErrorsForm('');
+        if (values.confirm && !values.password) {
+            errors.password = required(values.password);
+        }
         return errors;
     }
 
@@ -76,8 +79,9 @@ export const UserForm = ({user, editDataUser}) => {
                             <SecondName label="Фамилия" initialValue={user.secondName} setError={setErrorsServer}/>
                             <Email label="Электронная почта" initialValue={user.email} setError={setErrorsServer}/>
                             <Password label="Новый пароль"
-                                      placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;"/>
-                            <Confirm label="Повторите пароль" placeholder="Не задано"/>
+                                      placeholder="&bull;&bull;&bull;&bull;&bull;&bull;&bull;&bull;"
+                                      setError={setErrorsServer}/>
+                            <Confirm label="Повторите пароль" placeholder="Не задано" setError={setErrorsServer}/>
                         </div>
                     </div>
                 </div>)}

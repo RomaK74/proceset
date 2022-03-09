@@ -6,19 +6,18 @@ import './Field.scss';
 
 export function Field(props) {
     const [type, setType] = useState('password');
-
     const {
         input,
         meta: {error, touched, submitError}
     } = useField(props.name, {
-        initialValue: props.initialValue,
-        validate: props.validate
+        initialValue: props.initialValue || null,
+        validate: props.validate || null
     });
 
     const inputProps = {
-        ...props,
-        error: touched && error && true,
-        ...input
+        error: (touched && error && true) || "",
+        ...input,
+        placeholder: props.placeholder
     };
 
     const onClickEye = () => {
@@ -33,11 +32,12 @@ export function Field(props) {
                     <input className={'field__input' + (touched && error ? ' red' : '')}
                            {...inputProps}
                            type={props.type === "password" ? type : props.type}
+                           autoComplete={props.name === "password" || props.name === "confirm" || props.name === "email" ? "on" : "off"}
                            onFocus={props.onFocus}/>
                     {(props.name === "password" || props.name === "confirm") &&
                     <img className="field__eye" onClick={onClickEye}
                          src={type === "password" ? eyeClose : eyeOpen} alt="show/hide"/>}
-                    <div className="field__error">{touched && (error || submitError) ? error : ""}</div>
+                    <div className="field__error">{touched && (error || submitError) ? error.toString() : ""}</div>
                 </div>
             </div>
         </div>

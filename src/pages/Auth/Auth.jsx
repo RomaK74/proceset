@@ -8,7 +8,7 @@ import './Auth.scss';
 export const AuthForm = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const [error, setError] = useState('');
+    const [error, setError] = useState(null);
     const auth = localStorage.getItem('token');
 
     useEffect(() => {
@@ -25,7 +25,7 @@ export const AuthForm = () => {
             <div className="logo"><img src={Logo} alt="Proceset"/></div>
             <div className="form">
                 <Outlet context={[error, setError]}/>
-                {error && <Error error={error}/>}
+                {error && <Error error={error ? error : undefined}/>}
             </div>
         </div>
     );

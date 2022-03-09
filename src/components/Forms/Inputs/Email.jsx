@@ -9,5 +9,5 @@ export const Email = ({label, initialValue, setError}) =>
            type="email"
            initialValue={initialValue || ""}
            validate={composeValidators(required, isEmail)}
-           onFocus={() => setError('')}
+           onFocus={() => setError(null) || null}
     />

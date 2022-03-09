@@ -6,6 +6,6 @@ export const Password = ({label, placeholder, setError, validate}) =>
            type="password"
            placeholder={placeholder || "Пароль"}
            label={label || ""}
-           onFocus={() => setError('')}
+           onFocus={() => setError(null) || null}
            validate={validate}
     />

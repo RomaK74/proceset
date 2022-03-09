@@ -17,7 +17,6 @@ export const SignUpForm = () => {
     const [login] = useMutation(LOGIN);
     const [signup] = useMutation(SIGNUP);
     const navigate = useNavigate();
-
     useEffect(() => {
         setError('');
     }, []);
@@ -57,12 +56,12 @@ export const SignUpForm = () => {
             <Form onSubmit={onSubmit} validate={validate}>
                 {(props =>
                         <div>
-                            <FirstName onFocus={() => setError('')}/>
-                            <SecondName onFocus={() => setError('')}/>
-                            <Email onFocus={() => setError('')}/>
-                            <Password onFocus={() => setError('')} validate={required}/>
-                            <Confirm placeholder="Повторите пароль" validate={required} onFocus={() => setError('')}/>
-                            <Button submitting={props.submitting} error={error} text="Применить и войти"/>
+                            <FirstName setError={setError}/>
+                            <SecondName setError={setError}/>
+                            <Email setError={setError} />
+                            <Password setError={setError} validate={required}/>
+                            <Confirm placeholder="Повторите пароль" validate={required} setError={setError}/>
+                            <Button submitting={props.submitting} error={error ? error : undefined} text="Применить и войти"/>
                         </div>
                 )}
             </Form>

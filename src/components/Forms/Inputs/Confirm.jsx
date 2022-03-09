@@ -6,6 +6,6 @@ export const Confirm = ({label, placeholder, setError, validate}) =>
            type="password"
            placeholder={placeholder}
            label={"" || label}
-           onFocus={() => setError('')}
+           onFocus={() => setError(null) || null}
            validate={validate}
     />

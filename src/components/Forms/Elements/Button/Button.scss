@@ -1,0 +1,30 @@
+button {
+  border-radius: 4px;
+  background: rgba(255, 206, 12, 1);
+  outline: 0;
+  border: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 16px;
+  width: 100%;
+  padding: 6px 0;
+  margin: 10px 0 18px 0;
+  cursor: pointer;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  &:hover:enabled {
+    background: #FFD73B;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.12);
+  }
+
+  &:active:enabled {
+    background: #FFC40C;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.12);
+  }
+
+  &:focus:enabled {
+    background: #FFCE0C;
+    border: 1px solid #FFFBEA;
+    box-shadow: 0 1px 10px #FFD73B;
+  }
+}

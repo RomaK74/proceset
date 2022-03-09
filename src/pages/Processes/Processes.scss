@@ -1,0 +1,38 @@
+.processes {
+  padding-top: 70px;
+  padding-bottom: 15px;
+}
+
+@media screen and (max-width: 830px) {
+  .processes {
+
+    .process {
+
+      &__columns {
+        flex-wrap: wrap;
+        justify-content: space-around;
+      }
+
+      &__column {
+        padding: 10px;
+      }
+
+      &__link {
+        min-width: 135px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .processes {
+
+    .process {
+
+      &__title {
+        font-size: 18px;
+      }
+    }
+  }
+}

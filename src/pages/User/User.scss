@@ -1,0 +1,56 @@
+.content {
+  padding: 75px 22px 0;
+
+  &__name {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px auto 12px auto;
+
+    .name {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 35px;
+      display: flex;
+      align-items: center;
+      color: #404064;
+    }
+  }
+
+  .form {
+    padding: 24px 36px;
+    background: white;
+    box-sizing: border-box;
+
+    &__button {
+      width: unset;
+      padding: 5px 24px;
+      margin: unset;
+    }
+
+    &__inputs {
+      max-width: 696px;
+    }
+
+    &__input {
+      max-width: 435px;
+      color: #6879BB;
+    }
+  }
+}
+
+@media screen and (max-width: 666px) {
+  .content {
+    &__name {
+      .name {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .form {
+    &__button {
+      max-height: 35px;
+    }
+  }
+}

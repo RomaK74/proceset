@@ -1,0 +1,41 @@
+.auth {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  background: linear-gradient(229.77deg, #6879BB 2.47%, #9300BB 95.42%);
+
+  .logo {
+    padding: 32px 0;
+    margin: 0 auto;
+  }
+
+  .form {
+    max-width: 424px;
+    width: 100%;
+    height: calc(100% - 116px);
+    background: white;
+    margin: 0 auto;
+    box-sizing: border-box;
+    position: relative;
+
+    &__wrapper {
+      padding: 36px 48px;
+
+      h3 {
+        margin-top: 0;
+      }
+
+      .link, a {
+        font-size: 14px;
+        text-decoration: none;
+      }
+    }
+
+    &__error {
+      color: red;
+      font-size: 12px;
+      height: 14px;
+    }
+  }
+}

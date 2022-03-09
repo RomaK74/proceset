@@ -1,0 +1,36 @@
+.main__wrapper {
+  background: #EBF2FB;
+  min-height: 100vh;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 1px 10px rgba(104, 121, 187, 0.1);
+  height: 63px;
+  background: white;
+
+  &__menu {
+    padding: 22px 28px;
+    background: white;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #6879BB;
+    width: 75px;
+
+    img, span {
+      cursor: pointer;
+    }
+
+    img {
+      margin-right: 16px;
+    }
+  }
+}
+
+

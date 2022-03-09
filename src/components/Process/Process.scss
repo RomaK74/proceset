@@ -1,0 +1,122 @@
+.process {
+    margin: 22px 22px 12px;
+    background: white;
+    padding-right: 24px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 0 12px 24px;
+        border-bottom: 1px solid #D6DCE9;
+    }
+
+    &__link {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 16px;
+        display: flex;
+        align-items: center;
+        color: #6879BB;
+        cursor: pointer;
+
+        a {
+            text-decoration: none;
+            color: rgb(218, 221, 238);
+        }
+
+        img {
+            margin-left: 12px;
+            color: #daddee;
+        }
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 30px;
+        display: flex;
+        align-items: center;
+        color: #6879BB;
+    }
+
+    &__content {
+        max-width: 1000px;
+        padding: 36px 0 36px 28px;
+    }
+
+    &__columns {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__column {
+        height: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .row {
+            display: flex;
+
+            &__img {
+                margin-right: 12px;
+            }
+
+            &__info {
+                font-weight: bold;
+                font-size: 18px;
+                color: #535374;
+                display: flex;
+                align-items: center;
+                margin-bottom: 2px;
+
+                &_big {
+                    font-size: 26px;
+                }
+            }
+
+            &__label {
+                font-size: 12px;
+                line-height: 16px;
+                color: #999;
+            }
+        }
+    }
+
+    .count {
+        justify-content: center;
+    }
+
+    .time, .empproc {
+        justify-content: space-between;
+    }
+
+    .dates {
+        justify-content: flex-start;
+        margin-top: 4px;
+
+        .process__cycle {
+            margin-bottom: 25px;
+        }
+    }
+
+
+    &__cycle {
+        display: flex;
+        justify-content: space-between;
+        width: 186px;
+        font-size: 12px;
+    }
+
+    &__stage {
+        font-weight: normal;
+        font-size: 12px;
+        display: flex;
+        color: #999;
+    }
+
+    &__date {
+        color: #333;
+    }
+}
